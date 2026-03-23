@@ -1,0 +1,122 @@
+/* styles.css
+   シンプル & モダンなモバイルファーストスタイル
+*/
+
+:root{
+  --bg: #f6f9ff;
+  --text: #0b0b0b;
+  --muted: #6b7280;
+  --accent: #0b5fff; /* シンプルなアクセント */
+  --radius: 10px;
+  --container: 20px;
+  --card: #ffffff;
+  --section-shadow: 0 6px 20px rgba(15,23,42,0.04);
+}
+
+/* ベース */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'Helvetica Neue', Arial;
+  background: linear-gradient(180deg,var(--bg) 0%, #ffffff 40%);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  line-height:1.6;
+  padding-bottom:60px;
+}
+
+.container{padding:28px var(--container); max-width:900px; margin:0 auto}
+.container.small{max-width:760px}
+
+/* ヘッダー */
+.site-header{padding-top:36px;padding-bottom:36px}
+.note{font-size:12px;color:var(--muted);margin:0 0 12px}
+.kicker{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.04em;color:#1d4ed8;background:#eff6ff;border:1px solid #dbeafe;border-radius:999px;padding:4px 10px;margin:0 0 10px}
+.hero-title{font-size:28px;line-height:1.04;margin:0 0 10px;font-weight:700}
+.hero-line{display:block}
+.hero-line-strong{display:block;margin-top:6px;font-size:1.08em}
+.hero-sub{margin:0 0 18px;color:var(--muted);font-weight:600}
+.lead{color:var(--text);margin:0 0 18px}
+
+/* CTA */
+.cta-group{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
+.btn{display:inline-block;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:700;transition:transform .14s ease,box-shadow .14s ease}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:0 6px 18px rgba(11,95,255,0.12)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(11,95,255,0.14)}
+.btn-outline{background:transparent;border:1px solid rgba(11,95,255,0.12);color:var(--accent)}
+
+/* セクション共通 */
+.section{padding:22px;border-top:none;background:var(--card);box-shadow:var(--section-shadow);border-radius:12px}
+.section + .section{margin-top:18px}
+.section.alt{background:linear-gradient(180deg,#fbfbfd,#ffffff)}
+.section-title{font-size:18px;margin:0 0 8px;font-weight:700}
+.muted{color:var(--muted);margin:0 0 12px}
+.em{font-weight:700;color:var(--text);margin:8px 0}
+
+.problem-list,.risk-list{margin:12px 0 0;padding-left:18px}
+.problem-list li,.risk-list li{margin-bottom:8px}
+
+.value-list{padding-left:18px;margin:8px 0 0}
+.value-list li{margin-bottom:10px}
+
+.ig-card{display:flex;gap:12px;align-items:center;padding:12px;border-radius:10px;text-decoration:none;color:inherit;border:1px solid #eef2ff;background:#fff}
+.ig-thumb{width:72px;height:72px;border-radius:8px;border:1px solid #e5e7eb;display:block;background:linear-gradient(135deg,#dfe8ff,#f7f9ff)}
+.ig-title{font-weight:700;margin:0}
+.ig-sub{margin:2px 0 0;color:var(--muted);font-size:14px}
+
+/* サムネイル群 */
+.photos{display:flex;gap:12px;margin-top:12px}
+.photo{flex:1;min-height:88px;border-radius:10px;border:1px solid #eef2ff;display:block;background-size:cover;background-position:center}
+.photo-1{background:linear-gradient(135deg,#f3f4f6,#e9eefb)}
+.photo-2{background:linear-gradient(135deg,#fef3e7,#fde8d8)}
+.photo-3{background:linear-gradient(135deg,#e8fff4,#dff6eb)}
+
+/* ヒーロー装飾 */
+.hero-wrap{display:flex;flex-direction:column;align-items:flex-start;gap:18px}
+.hero-visual{width:100%;display:flex;justify-content:flex-end}
+.decor-ball{max-width:260px;height:auto;opacity:0.98}
+.hero-logo{width:120px;height:auto;object-fit:contain;display:block;margin-bottom:10px}
+.inline-visual{margin:14px 0 0}
+.inline-deco{height:180px;border-radius:12px;background:linear-gradient(180deg,#eaf4ff,#f7fbff);border:1px solid #e5eefb;box-shadow:0 8px 20px rgba(14,28,54,0.04)}
+
+@media(min-width:720px){
+  .hero-wrap{flex-direction:row;align-items:center;justify-content:space-between}
+  .hero-content{max-width:60%}
+  .hero-visual{max-width:36%}
+  .photos .photo{min-height:130px}
+  .hero-logo{width:160px}
+}
+
+/* コーチカード */
+.coach{display:flex;gap:12px;align-items:center;margin-top:14px;padding:12px;border-radius:10px;background:#fff;border:1px solid #f2f6ff}
+.avatar{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#e9eefb,#dbe8ff);flex-shrink:0}
+.coach-name{margin:0;font-weight:700}
+.coach-text{margin:6px 0 0;color:var(--muted);font-size:14px}
+
+.steps{padding-left:18px;margin:8px 0 0}
+.steps li{margin-bottom:10px}
+
+/* フッター */
+.site-footer{margin-top:28px;padding-top:24px;border-top:1px solid #f2f4f7}
+
+/* レスポンシブ（中型以上） */
+@media(min-width:720px){
+  .hero-title{font-size:40px}
+  .hero-sub{font-size:18px}
+  .lead{font-size:16px}
+  .container{padding-left:32px;padding-right:32px}
+  .hero-line-strong{font-size:1.12em}
+}
+
+@media(min-width:1000px){
+  :root{--container:32px}
+  .container{max-width:1100px}
+  .hero-title{font-size:48px}
+  .hero-line-strong{font-size:1.18em}
+  .hero-logo{width:200px}
+}
+
+/* アクセシビリティ補助 */
+.btn:focus{outline:3px solid rgba(11,95,255,0.14);outline-offset:2px}
+.ig-card:focus{outline:3px solid rgba(11,95,255,0.08);outline-offset:2px}
