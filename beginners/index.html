@@ -30,9 +30,11 @@
     }
 
     h1 {
-      font-size: 32px;
-      line-height: 1.4;
-      margin-bottom: 20px;
+      font-size: 28px;
+      line-height: 1.25;
+      margin-bottom: 12px;
+      word-break: keep-all;
+      hyphens: none;
     }
 
     h2 {
@@ -58,9 +60,22 @@
 
     .hero strong {
       color: var(--accent);
-      font-size: 22px;
+      font-size: 20px;
       display: block;
-      margin-top: 10px;
+      margin-top: 8px;
+      line-height: 1.05;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    /* タイトルとサブタイトルの改行制御 */
+    .site-title{display:inline-block;font-weight:700;vertical-align:middle}
+    .site-sub{display:inline-block;color:#666;margin-left:0.6ch;vertical-align:middle;white-space:nowrap}
+    @media(max-width:420px){
+      .site-title{font-size:14px}
+      .site-sub{font-size:12px}
+      .hero{padding:36px 14px 36px}
+      .hero h1{font-size:24px}
+      .hero strong{font-size:18px}
     }
 
     .lead {
@@ -141,7 +156,11 @@
 
 <!-- ヒーロー -->
 <section class="hero">
-  <p><img src="../assets/images/favicon.png" alt="ブルズアイコン" class="hero-icon">横浜ブルズラグビースクール 選手募集・応援サイト（未経験者向け）</p>
+  <p>
+    <img src="../assets/images/favicon.png" alt="ブルズアイコン" class="hero-icon">
+    <span class="site-title">横浜ブルズラグビースクール</span>
+    <span class="site-sub">選手募集・応援サイト（未経験者向け）</span>
+  </p>
 
   <h1>
     ラグビー未経験でも安心して始められる<br>
@@ -154,7 +173,7 @@
 
   <p class="lead">
     横浜市在住の新中1年生対象。<br>
-    初めてラグビーをする子も、他スポーツ経験がある子も、<br>
+    初めてラグビーをする子も、他スポーツ経験がある子も、
     チームで動く楽しさを体感しながら自然に成長できます。
   </p>
 
@@ -236,7 +255,6 @@
 
 <footer>
   このサイトは選手の保護者が作成した、横浜ブルズラグビースクール応援サイトです。
-  <br>このサイトについてのお問い合わせ：<a href="mailto:atsuvu@gmail.com">お問い合わせはこちら</a>
 </footer>
 
 </body>
