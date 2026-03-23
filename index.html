@@ -69,7 +69,6 @@
     }
 
     /* 改行の微調整: モバイルで長い見出しが窮屈にならないようにする */
-    .hero h1 br { display: none; }
     .hero h1 > strong { display: block; }
 
     .lead {
@@ -171,6 +170,15 @@
       border-radius: 6px;
       display: block;
     }
+
+    /* サイト名とサブタイトルの改行制御 */
+    .site-title{display:inline-block;font-weight:700;vertical-align:middle}
+    .site-sub{display:inline-block;color:#666;margin-left:0.6ch;vertical-align:middle;white-space:nowrap}
+    @media(max-width:420px){
+      /* モバイルではタイトルとサブを1行に収めやすくするため縮める */
+      .site-title{font-size:14px}
+      .site-sub{font-size:12px}
+    }
   </style>
 </head>
 
@@ -178,7 +186,11 @@
 
 <!-- ヒーロー -->
 <section class="hero">
-  <p><img src="assets/images/favicon.png" alt="ブルズアイコン" class="hero-icon">横浜ブルズラグビースクール 選手募集・応援サイト</p>
+  <p>
+    <img src="assets/images/favicon.png" alt="ブルズアイコン" class="hero-icon">
+    <span class="site-title">横浜ブルズラグビースクール</span>
+    <span class="site-sub">選手募集・応援サイト</span>
+  </p>
   <h1>
     うまい子が試合に出るのではない。<br>
     <strong>試合に出ている子が上手くなる</strong>
@@ -190,8 +202,7 @@
 
   <p class="lead">
     横浜市在住の新中1年生対象。<br>
-    ベンチで見ている時間と、グラウンドでプレーする時間。<br>
-    その差が、成長の差になります。
+    ベンチで見ている時間と、グラウンドでプレーする時間。その差が、成長の差になります。
   </p>
 
   <div>
@@ -266,7 +277,6 @@
 
 <footer>
   このサイトは選手の保護者が作成した、横浜ブルズラグビースクール応援サイトです。
-  <br>このサイトについてのお問い合わせ：<a href="mailto:atsuvu@gmail.com">お問い合わせはこちら</a>
 </footer>
 
 </body>
