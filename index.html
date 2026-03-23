@@ -30,9 +30,11 @@
     }
 
     h1 {
-      font-size: 32px;
-      line-height: 1.4;
-      margin-bottom: 16px;
+      font-size: 28px;
+      line-height: 1.25;
+      margin-bottom: 12px;
+      word-break: keep-all;
+      hyphens: none;
     }
 
     h2 {
@@ -59,10 +61,16 @@
 
     .hero strong {
       color: var(--accent);
-      font-size: 22px;
+      font-size: 20px;
       display: block;
-      margin-top: 10px;
+      margin-top: 8px;
+      line-height: 1.05;
+      -webkit-font-smoothing:antialiased;
     }
+
+    /* 改行の微調整: モバイルで長い見出しが窮屈にならないようにする */
+    .hero h1 br { display: none; }
+    .hero h1 > strong { display: block; }
 
     .lead {
       font-size: 16px;
@@ -136,6 +144,14 @@
       padding: 30px 20px;
       font-size: 12px;
       color: #777;
+    }
+
+    /* レスポンシブ（小型） */
+    @media (max-width:420px){
+      .hero { padding: 36px 14px 36px; }
+      .hero h1 { font-size: 24px; }
+      .hero strong { font-size:18px; }
+      .hero-image{max-width:440px}
     }
 
     /* 画像のボックス */
